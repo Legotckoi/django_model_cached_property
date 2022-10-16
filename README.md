@@ -6,7 +6,7 @@ This package use redis like a caching backend, because redis allow to delete key
 
 ## Install
 
-```pip install -U django_model_cached_property```
+```pip install -U django-model-cached-property```
 
 ## Install and configure requirements
 
