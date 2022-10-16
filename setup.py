@@ -11,7 +11,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django_model_cached_property',
-    version='0.0.1',
+    version='0.0.2',
     license='MIT License',
     description='Django model cached property',
     long_description=README,
