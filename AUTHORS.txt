@@ -1,0 +1,2 @@
+django_model_cached_property was originally created by Evgenii Legotckoi (legotskoy@gmail.com)
+with contributions from:
