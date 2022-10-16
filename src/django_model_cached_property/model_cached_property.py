@@ -35,20 +35,3 @@ def model_cached_property(method=None, timeout=getattr(settings, "MODEL_CACHED_P
         return result
 
     return function_wrapper
-
-
-def invalidate_model_cached_property(model_object, function):
-    """
-    Function for invalidation model cached property
-
-    :param model_object: model instance, on which should be invalidated property
-    :param function: wrapped function, which should be invalidated
-    :return:
-    """
-    cache_keys = cache.keys('django_model_cached_property_{}_{}_{}_*'.format(
-        model_object._meta.db_table,
-        model_object.id,
-        function.__name__,
-    ))
-    for key in cache_keys:
-        cache.delete(key)
