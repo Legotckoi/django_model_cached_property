@@ -83,7 +83,7 @@ class Article(models.Model):
         return self.__user_in_bookmarks(user) if user.is_authenticated else False
 ```
 
-## invalidate_model_cached_property
+### invalidate_model_cached_property
 
 This function invalidate all cache keys on the property for one model record in database.
 
@@ -96,7 +96,7 @@ invalidate_model_cached_property(article, article.comments_count)
 
 In this case you invalidate all cached keys for article with primary key 2.
 
-### WARNING - Limitation
+## WARNING - Limitation
 
 Limitation of this caching functionality consists in the fact that you can use it with unique input arguments only.
 It means, that will not work with AnonymousUser object, because of in each request information about AnonymousUser object will be different, although it will be called by same user.
